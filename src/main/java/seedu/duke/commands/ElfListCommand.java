@@ -8,7 +8,7 @@ public class ElfListCommand extends Command {
     
     /**
      * Executes the command to display all elves.
-     * * @return A formatted string of all elves or an empty list message.
+     * @return A formatted string of all elves or an empty list message.
      */
     @Override
     public String execute() {

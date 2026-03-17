@@ -8,7 +8,7 @@ public class ChildListCommand extends Command {
     
     /**
      * Executes the command to display all children.
-     * * @return A formatted string of all children or an empty list message.
+     * @return A formatted string of all children or an empty list message.
      */
     @Override
     public String execute() {
