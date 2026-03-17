@@ -1,7 +1,15 @@
+//@@author Kiri
 package seedu.duke.commands;
 
+/**
+ * Represents a command to list all children in the child list.
+ */
 public class ChildListCommand extends Command {
     
+    /**
+     * Executes the command to display all children.
+     * * @return A formatted string of all children or an empty list message.
+     */
     @Override
     public String execute() {
 
@@ -16,3 +24,4 @@ public class ChildListCommand extends Command {
     }
     
 }
+//@@Kiri

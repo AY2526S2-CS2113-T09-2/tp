@@ -1,14 +1,25 @@
+//@@author Kiri
 package seedu.duke.commands;
 
 import seedu.duke.data.child.Child;
 
+/**
+ * Represents a command to find children by their specific name.
+ */
 public class FindCommand extends Command{
     private final String targetName;
     
+    /**
+     * @param targetName The name to search for, case-insensitive.
+     */
     public FindCommand(String targetName) {
         this.targetName = targetName.trim().toLowerCase();
     }
     
+    /**
+     * Searches for matching children and returns the results.
+     * @return A list of matches or a message indicating no results found.
+     */
     @Override
     public String execute() {
         if (childList == null || childList.isEmpty()) {
@@ -28,3 +39,4 @@ public class FindCommand extends Command{
         return (count == 0) ? "No match found." : "Found " + count + " matches:\n" + sb.toString().trim();
     }
 }
+//@@Kiri

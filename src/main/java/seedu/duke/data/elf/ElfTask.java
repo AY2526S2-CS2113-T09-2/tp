@@ -1,9 +1,10 @@
+//@@Kiri
 package seedu.duke.data.elf;
 // similar to child class,
 
 public class ElfTask {
     private String task;
-    // no special constrains to task name, use string is enough
+    // no specific constrains to elf task
     public ElfTask(String task) {
         this.task = task;
     }
@@ -17,3 +18,4 @@ public class ElfTask {
     }
     
 }
+//@@Kiri

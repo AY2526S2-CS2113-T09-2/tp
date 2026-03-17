@@ -5,6 +5,7 @@ package seedu.duke.parser;
 import seedu.duke.commands.ActionCommand;
 import seedu.duke.commands.ChildCommand;
 import seedu.duke.commands.ChildListCommand;
+import seedu.duke.commands.ElfCommand;
 import seedu.duke.commands.ElfListCommand;
 import seedu.duke.commands.FindCommand;
 import seedu.duke.commands.Command;
@@ -24,20 +25,25 @@ public class Parser {
         case "child":
             return prepareAdd(arguments);
         
+        //@@author GShubhan
+        case "action":
+            return prepareAction(arguments);
+        //@@author
+        
+        //@@author Kiri
         case "childlist":
             return new ChildListCommand();
         
         case "elflist":
             return new ElfListCommand();
-            
+        
         case "find":
             return new FindCommand(arguments);
-
-        //@@author GShubhan
-        case "action":
-            return prepareAction(arguments);
-        //@@author
-            
+        
+        case "elf":
+            return  new ElfCommand(arguments);
+        //@@Kiri
+        
         default:
             throw new IllegalValueException("Unknown command. Did you mean 'child' or 'childlist'?");
         }

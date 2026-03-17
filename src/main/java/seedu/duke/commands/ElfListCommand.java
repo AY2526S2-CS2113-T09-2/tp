@@ -1,7 +1,15 @@
+//@@author Kiri
 package seedu.duke.commands;
 
+/**
+ * Represents a command to list all elves in the elf list.
+ */
 public class ElfListCommand extends Command {
     
+    /**
+     * Executes the command to display all elves.
+     * * @return A formatted string of all elves or an empty list message.
+     */
     @Override
     public String execute() {
         
@@ -16,3 +24,4 @@ public class ElfListCommand extends Command {
     }
     
 }
+//@@Kiri
