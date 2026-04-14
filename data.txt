@@ -5,3 +5,4 @@ CHILD|bob|mao|-1
 CHILD|cici||11
 ELF|aaa
 TASK|buy candy
+ELF|buddy a helper

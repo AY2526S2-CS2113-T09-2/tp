@@ -736,20 +736,19 @@ public class Parser {
     }
     
     private Command prepareElf(String args) throws IllegalValueException {
-        String name = null;
-
-        String[] tokens = args.split(" ");
-
-        for (String token : tokens) {
-            if (token.startsWith("n/")) {
-                name = token.substring(2);
-            }
-        }
-
-        if (name == null || name.isEmpty()) {
+        String trimmedArgs = args.trim();
+        
+        int nPos = trimmedArgs.indexOf("n/");
+        if (nPos == -1) {
             throw new IllegalValueException("Format: elf n/NAME");
         }
-
+        
+        String name = trimmedArgs.substring(nPos + 2).trim();
+        
+        if (name.isEmpty()) {
+            throw new IllegalValueException("Format: elf n/NAME");
+        }
+        
         return new ElfCommand(name);
     }
 

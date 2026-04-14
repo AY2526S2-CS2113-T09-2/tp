@@ -137,7 +137,6 @@ Freezes the nice and naughty lists. Once finalized:
 
 #### Adding an elf: `elf`
 Adds a new elf to the system records.
-* An elf's name can only consist of one word (for example, “Buddy” is acceptable, but “Buddy helper” will be counted as “Buddy”).
 
 * Format: `elf n/NAME`
 * Example: `elf n/Buddy`
